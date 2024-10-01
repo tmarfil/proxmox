@@ -108,7 +108,7 @@ main() {
     remove_user_caches
     remove_old_kernels
     clear_journal_logs
-    remove_cloud_init_data
+#    remove_cloud_init_data
     zero_free_space
     
     print_message "Clean-up process completed"
