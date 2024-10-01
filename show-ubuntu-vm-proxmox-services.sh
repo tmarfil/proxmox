@@ -43,17 +43,9 @@ main() {
     check_package "qemu-guest-agent"
     check_service "qemu-guest-agent"
     
-    # Check SPICE Agent
-    check_package "spice-vdagent"
-    check_service "spice-vdagent"
-    
     # Check ACPI Daemon
     check_package "acpid"
     check_service "acpid"
-    
-    # Check Open VM Tools
-    check_package "open-vm-tools"
-    check_service "open-vm-tools"
     
     # Check Chrony (for time synchronization)
     check_package "chrony"
@@ -62,11 +54,6 @@ main() {
     # Additional Proxmox-related checks
     echo "Additional Checks:"
     echo "=================="
-    
-    # Check if virtio drivers are loaded
-    echo "Checking virtio drivers:"
-    lsmod | grep virtio | sed 's/^/  /'
-    echo
     
     # Check if /dev/pve exists (indicates Proxmox environment)
     echo -n "Checking for /dev/pve: "
